@@ -67,6 +67,14 @@ function game() {
         console.log(result);
         console.log(`Your wins: ${playerWins} | Computer wins: ${computerWins} | Ties: ${ties}`);
     }
+
+    if (playerWins > computerWins) {
+        return `Congratulations! You won ${playerWins} times with ${ties} ties in 5 rounds.`;
+    } else if (playerWins < computerWins) {
+        return `Better luck next time! You lost ${computerWins} times with ${ties} ties in 5 rounds.`;
+    } else {
+        return `You tied against the computer with ${playerWins} wins, ${computerWins} losses, and ${ties} ties.`;
+    }
 }
 
-game();
+console.log(game());
